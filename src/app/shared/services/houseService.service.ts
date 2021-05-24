@@ -7,11 +7,11 @@ import { House } from '../models';
 
 @Injectable({ providedIn: 'root' })
 export class HouseSerice {
-  constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient) { }
 
   getAllHouses(): Observable<Array<House>> {
     return this._http
-      .get<IResponse<Array<IHouse>>>('https://anapioficeandfire.com/api/houses')
-      .pipe(map((results) => results.data.map((house) => new House(house))));
+      .get<Array<IHouse>>('https://anapioficeandfire.com/api/houses')
+      .pipe(map((results) => results.map(item => new House(item))));
   }
 }

@@ -9,12 +9,11 @@ import { HouseSerice } from 'src/app/shared/services';
   styleUrls: ['./houses-overview.component.sass'],
 })
 export class HousesOverviewComponent implements OnInit {
-  constructor(private _houseService: HouseSerice) {}
+  constructor(private _houseService: HouseSerice) { }
 
   houses$: Observable<Array<IHouse>>;
 
   ngOnInit(): void {
     this.houses$ = this._houseService.getAllHouses();
-    this.houses$.subscribe((hoouse) => console.log(hoouse));
   }
 }

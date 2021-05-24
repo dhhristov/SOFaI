@@ -1,12 +1,5 @@
-<div class="row">
-  <card
-    class="m-30 flex-01"
-    [cardTitle]="'Test met best west hest mest test'"
-  ></card>
-  <card class="m-30 flex-01" [cardTitle]="'T'" region="nope"></card>
-  <card class="m-30 flex-01" [cardTitle]="'T'"></card>
-  <card class="m-30 flex-01" [cardTitle]="'Test'"></card>
-  <card class="m-30 flex-01" [cardTitle]="''"></card>
-  <card class="m-30 flex-01" [cardTitle]="'Test'"></card>
-  <card class="m-30 flex-01" [cardTitle]="'Test'"></card>
+<div *ngIf="houses$ | async as houses" class="row">
+  <card *ngFor="let house of houses" class="m-30 flex-01" [cardTitle]="'Name: ' + house.name"
+    [region]="'Region: ' + house.region">
+  </card>
 </div>

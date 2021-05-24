@@ -1,7 +1,7 @@
 import { IHouse } from '../interfaces';
 
 export class House implements IHouse {
-  ancestralWeapons: string;
+  ancestralWeapons: Array<string>;
   cadetBranches: Array<string>;
   coatOfArms: string;
   currentLord: string;
