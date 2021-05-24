@@ -1,0 +1,12 @@
+@import "../../shared/assets/css/settings.colors";
+
+:host {
+  flex: none;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.footer {
+  background-color: black;
+  color: $colorPurple;
+}

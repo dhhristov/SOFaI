@@ -1,0 +1,18 @@
+@import "../../shared/assets/css/settings.colors";
+
+.header {
+  position: fixed;
+  box-shadow: black 0 0 24px 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  width: calc(100% - 30px);
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 6px 15px;
+  top: 0;
+  background: $colorDarkGrey;
+  color: $colorFog;
+  z-index: 9999;
+}

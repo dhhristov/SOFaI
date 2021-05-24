@@ -1,0 +1,71 @@
+.pos-abs {
+  position: absolute;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-10 {
+  padding: 10;
+}
+
+.p-20 {
+  padding: 20;
+}
+
+.p-50 {
+  padding: 50;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.m-30 {
+  margin: 30px;
+}
+
+.just-center {
+  justify-content: center;
+}
+
+.m-50 {
+  margin: 50px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-0 {
+  flex: 0;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plr-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  padding: 50px 20px;
+}
