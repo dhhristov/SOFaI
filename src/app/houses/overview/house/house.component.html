@@ -1,0 +1,20 @@
+<div *ngIf="house$ | async as house" class="p-50">
+  <h1>{{ house.name }}</h1>
+  <p id="region">{{ house.region }}</p>
+  <p id="words">{{ house.words }}</p>
+  <div *ngIf="overlord$ | async as overlord">
+    <p id="overlord-name">Overlord: {{ overlord.name }}</p>
+  </div>
+  <div *ngIf="heir$ | async as heir">
+    <p id="heir-name">heir: {{ heir.name }}</p>
+  </div>
+  <div *ngIf="currentLord$ | async as currentLord">
+    <p id="currentLord-name">Current Lord: {{ currentLord.name }}</p>
+  </div>
+  <h3 *ngIf="swornMembers.length">Sworn Members:</h3>
+  <ul *ngFor="let member of swornMembers">
+    <li *ngIf="member | async as swornMember" id="swornMembers-name">
+      {{ swornMember.name }}
+    </li>
+  </ul>
+</div>

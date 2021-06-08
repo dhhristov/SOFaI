@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { HouseComponent } from './house/house.component';
 import { HousesOverviewComponent } from './houses-overview.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HousesOverviewComponent,
+    data: {
+      title: 'Houses Overview',
+    },
+  },
+  {
+    path: ':id',
+    component: HouseComponent,
     data: {
       title: 'Houses Overview',
     },

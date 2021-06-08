@@ -1,5 +1,10 @@
 <div *ngIf="houses$ | async as houses" class="row">
-  <card *ngFor="let house of houses" class="m-30 flex-01" [cardTitle]="'Name: ' + house.name"
-    [region]="'Region: ' + house.region">
+  <card
+    *ngFor="let house of houses"
+    class="m-30 flex-01"
+    [cardTitle]="'Name: ' + house.name"
+    [region]="'Region: ' + house.region"
+    (click)="navigateToHouse(house.id)"
+  >
   </card>
 </div>
