@@ -27,15 +27,18 @@ export class HouseComponent implements OnInit {
     this.house$.subscribe((house) => {
       console.log(house);
       if (house.overlord)
-        this.overlord$ = this._houseService.getWarlord(house.overlord);
-      if (house.heir) this.heir$ = this._houseService.getWarlord(house.heir);
+        this.overlord$ = this._houseService.getHouseByURL(house.overlord);
+      if (house.heir)
+        this.heir$ = this._houseService.getCharacterByURL(house.heir);
       if (house.currentLord)
-        this.currentLord$ = this._houseService.getWarlord(house.currentLord);
+        this.currentLord$ = this._houseService.getCharacterByURL(
+          house.currentLord
+        );
       if (house.swornMembers)
         house.swornMembers.forEach((memeber) => {
-          this.swornMembers.push(this._houseService.getWarlord(memeber));
+          this.swornMembers.push(this._houseService.getCharacterByURL(memeber));
           this._houseService
-            .getWarlord(memeber)
+            .getCharacterByURL(memeber)
             .subscribe((member) => console.log(member));
         });
     });
