@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BooksOverviewComponent } from './books-overview.component';
@@ -8,9 +9,9 @@ describe('BooksOverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BooksOverviewComponent ]
-    })
-    .compileComponents();
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      declarations: [BooksOverviewComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

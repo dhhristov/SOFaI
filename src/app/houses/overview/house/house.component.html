@@ -1,5 +1,5 @@
 <div *ngIf="house$ | async as house" class="p-50">
-  <h1>{{ house.name }}</h1>
+  <h1 id="house-name">{{ house.name }}</h1>
   <p id="region">{{ house.region }}</p>
   <p id="words">{{ house.words }}</p>
   <div *ngIf="overlord$ | async as overlord">

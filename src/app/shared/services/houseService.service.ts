@@ -6,7 +6,7 @@ import { IHouse, IResponse } from '../interfaces';
 import { BaseCharacter, House, IBaseCharacter } from '../models';
 
 @Injectable({ providedIn: 'root' })
-export class HouseSerice {
+export class HouseService {
   constructor(private _http: HttpClient) {}
 
   private _API_PREFIX = 'https://anapioficeandfire.com/api/houses';

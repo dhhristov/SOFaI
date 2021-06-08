@@ -2,7 +2,7 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { IHouse } from 'src/app/shared/interfaces';
-import { HouseSerice } from 'src/app/shared/services';
+import { HouseService } from 'src/app/shared/services';
 
 @Component({
   selector: 'houses-overview',
@@ -11,7 +11,7 @@ import { HouseSerice } from 'src/app/shared/services';
 })
 export class HousesOverviewComponent implements OnInit {
   constructor(
-    private _houseService: HouseSerice,
+    private _houseService: HouseService,
     private _injector: Injector
   ) {}
 
@@ -21,7 +21,6 @@ export class HousesOverviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.houses$ = this._houseService.getAllHouses();
-    this.houses$.subscribe((house) => console.log(house)); //<--- remove after
   }
 
   navigateToHouse(houseId): void {

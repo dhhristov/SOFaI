@@ -15,7 +15,7 @@ const routes: Routes = [
     path: ':id',
     component: HouseComponent,
     data: {
-      title: 'Houses Overview',
+      title: 'House Preview',
     },
   },
 ];
