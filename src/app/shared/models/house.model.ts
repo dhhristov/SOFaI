@@ -1,6 +1,7 @@
 import { IHouse } from '../interfaces';
 
 export class House implements IHouse {
+  id: string;
   ancestralWeapons: Array<string>;
   cadetBranches: Array<string>;
   coatOfArms: string;
@@ -19,6 +20,8 @@ export class House implements IHouse {
   words: string;
   constructor(rawObject: IHouse) {
     if (rawObject) {
+      let houseNumber = rawObject.url.split('/'); // don't wanna call entire url for single house, need only the ID of the house
+      this.id = houseNumber[houseNumber.length - 1];
       this.ancestralWeapons = rawObject.ancestralWeapons;
       this.cadetBranches = rawObject.cadetBranches;
       this.coatOfArms = rawObject.coatOfArms;

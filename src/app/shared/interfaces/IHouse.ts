@@ -1,4 +1,5 @@
 export interface IHouse {
+  id: string;
   ancestralWeapons: Array<string>;
   cadetBranches: Array<string>;
   coatOfArms: string;
